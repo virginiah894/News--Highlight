@@ -1,3 +1,5 @@
+
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +10,34 @@
 </head>
 <body>
     <div>
-        <h3>YOUR GLOBAL NEWS</h3>
+        <h3 style="text-align:center;">YOUR GLOBAL NEWS</h3>
         <ul>
-        
-          <li>{{ general}}</li>
+        {% for general_news in general %}
+          <li>{{ macro.displayNewslist(general) }}</li>
+          {% endfor %}
         </ul>
       </div>
+      <div>
+          <ul>
+          {% for business_news in business %}
+            <li>{{ macro.displayNewslist(business) }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+            <ul>
+            {% for technology_news in technology %}
+              <li>{{ macro.displayNewslist(technology) }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div>
+              <ul>
+              {% for sports_news in sports %}
+                <li>{{ macro.displayNewslist(sports)}}</li>
+                {% endfor %}
+              </ul>
+            </div>
 </body>
 </html>
 

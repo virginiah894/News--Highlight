@@ -19,15 +19,13 @@ def get_news(category):
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
 
-        news_results = None
+        news_sources = None
+        if get_news_response['sources']:
 
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
-            news_results = process_results(movie_results_list)
-
-
-    return news_results
-  def process_results(movie_list):
+            news_sources_list = get_news_response['sources']
+            news_sources = process_sources(news_sources_list)
+    return news_sources
+def process_sources(news_list):
 
 
     '''
@@ -40,7 +38,7 @@ def get_news(category):
         movie_results: A list of movie objects
     '''
 
-    news_results = []
+    news_sources = []
     for news_item in news_list:
 
         id = news_item.get('id')
@@ -49,5 +47,5 @@ def get_news(category):
         description = news_item.get('description')
         url = news_item.get('url')
         country = news_item.get('country')
-    return news_results
+    return news_sources
     
