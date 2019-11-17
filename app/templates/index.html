@@ -12,29 +12,33 @@
     <div>
         <h3 style="text-align:center;">YOUR GLOBAL NEWS</h3>
         <ul>
+          <h2>General News</h2>
         {% for general_news in general %}
-          <li>{{ macro.displayNewslist(general) }}</li>
+          <li>{{ macro.displayNewsList(general) }}</li>
           {% endfor %}
         </ul>
       </div>
       <div>
           <ul>
+            <h2>Business News</h2>
           {% for business_news in business %}
-            <li>{{ macro.displayNewslist(business) }}</li>
+            <li>{{ macro.displayNewsList(business) }}</li>
             {% endfor %}
           </ul>
         </div>
         <div>
             <ul>
+              <h2>Technology News</h2>
             {% for technology_news in technology %}
-              <li>{{ macro.displayNewslist(technology) }}</li>
+              <li>{{ macro.displayNewsList(technology) }}</li>
               {% endfor %}
             </ul>
           </div>
           <div>
               <ul>
+                <h2>Sports News</h2>
               {% for sports_news in sports %}
-                <li>{{ macro.displayNewslist(sports)}}</li>
+                <li>{{ macro.displayNewsList(sports)}}</li>
                 {% endfor %}
               </ul>
             </div>

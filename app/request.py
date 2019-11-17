@@ -44,8 +44,12 @@ def process_sources(news_list):
         id = news_item.get('id')
         name = news_item.get('name')
         category = news_item.get('category')
+        language = news_item.get('language')
         description = news_item.get('description')
         url = news_item.get('url')
         country = news_item.get('country')
+        news_object=News(id,name,category,language,description,url,country)
+        news_sources.append(news_object)
+        # id,name,category,language,description,url,country
     return news_sources
     
