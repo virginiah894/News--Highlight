@@ -52,4 +52,26 @@ def process_sources(news_list):
         news_sources.append(news_object)
         # id,name,category,language,description,url,country
     return news_sources
+
+    def get_source(id):
+    get_news_details_url = base_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_news_details_url) as url:
+        news_details_data = url.read()
+        news_details_response = json.loads(news_details_data)
+
+        news_object = None
+        if news_details_response:
+            id = news_details_response.get('id')
+            name = news_details_response.get('name')
+            category = news_details_response.get('category')
+            language = news_details_response.get('language')
+            description= news_details_response.get('description')
+            url = news_details_response.get('url')
+            country =news_details_response.get('country')
+
+            news_object = News(id,name,category,language,description,url,country)
+
+    return news_object
+
     
