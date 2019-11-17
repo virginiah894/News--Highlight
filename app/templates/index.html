@@ -1,16 +1,18 @@
-
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NEWS WORLD</title>
-</head>
+</head> -->
+{% block content %}
 <body>
     <div>
         <h3 style="text-align:center;">YOUR GLOBAL NEWS</h3>
+        <h4>{{ title }}</h4>
         <ul>
           <h2>General News</h2>
         {% for general_news in general %}
@@ -43,6 +45,6 @@
               </ul>
             </div>
 </body>
-</html>
+{% endblock%}
 
 
