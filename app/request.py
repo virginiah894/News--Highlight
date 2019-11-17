@@ -26,3 +26,4 @@ def get_news(category):
 
 
     return news_results
+    
