@@ -11,7 +11,8 @@ class NewsTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news = News(12,'today','politics','English','https://image.tmdb.org/t/p/w500/khsjha27hbs','Leadership',url)
+        self.new_news = News(cnn,'CNN','general','en','View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN',
+','http://wwww.us.cnn.cnn','us')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_news News))
