@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+    {% for articles in highlights %}
+    <div class="container">
+            <div class="card" style="width: 18rem;">
+                    <img src="{{highlights.urlToImage}}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{highlights.title}}</h5>
+                      <p class="card-text">{{highlights.description }}</p>
+                      <a href="#" class="btn btn-primary">{{highlights.url}}</a>
+                    </div>
+                  </div>
+    
+    </div>
+    {% endfor %}
+{% endblock %}

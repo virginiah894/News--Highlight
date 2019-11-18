@@ -1,24 +1,13 @@
 {% macro displayNewsList(news_list) %}
 
     {% for news in news_list %}
-    
-        <li class="text-center"> 
-            <a href="/news/{{news.id}}">
-                {{ news.name|truncate(10)}}</a>
-       </li>
-    
-        <li>{{ news.id }}</li>
-        <li>{{ news.name}}</li>
-        <li>{{ news.category }}</li>
-        <li>{{ news.language}}</li>
-        <li>{{ news.description }}</li>
-          <a href="/news/{{news.id}}">
-                {{ news.url|truncate(10)}}</a>
-       <!-- </li> <li>{{ news.url }}</li> -->
-        <li>{{ news.country }}</li>
-        
-
-
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ news.name }}</h5>
+          <p class="card-text">{{ news.description }}</p>
+          <a href="{{ news.url}}" class="btn btn-primary">Visit site</a>
+        </div>
+      </div>
     {% endfor %}
 
 {% endmacro %}
