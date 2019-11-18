@@ -8,6 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NEWS WORLD</title>
 </head> -->
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 {% block content %}
 <body>
     <div>
