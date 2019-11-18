@@ -4,6 +4,7 @@ class Config:
   
   NEWS_API_BASE_URL ='https://newsapi.org/v2/sources?language=en&country=us&category={}&apiKey={}'
   HIGHLIGHTS_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
+  ALL_ARTICLES_BASE_URL ='https://newsapi.org/v2/everything?domains=nytimes.com&apiKey={}'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 # SEARCHS_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
 #     SOURCES_BASE_URL ='https://newsapi.org/v2/sources?language=en&apiKey={}'

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  {% for news in all %}
+  
+  <div class="col-sm-12 col-md-3">
+
+      <div class="card" style="width: 18rem;">
+              <img src="{{news.urlToImage}}" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">{{news.title}}</h5>
+                <p class="card-text">{{news.description }}</p>
+                <a href="{{news.url}}" class="btn btn-primary">see more</a>
+              </div>
+            </div>
+            
+
+</div>
+{%endfor %}
+</div>
+{% endblock %}

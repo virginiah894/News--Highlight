@@ -20,6 +20,7 @@ class Highlights:
         self.urlToImage = urlToImage
         self. publishedAt= publishedAt
         self.url = url
+
   
   
 

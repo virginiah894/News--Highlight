@@ -1,6 +1,7 @@
 {% macro displayNewsList(news_list) %}
-
+<div class="row">
     {% for news in news_list %}
+    <div class="col-sm-12 col-md-3">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{ news.name }}</h5>
@@ -8,6 +9,8 @@
           <a href="{{ news.url}}" class="btn btn-primary">Visit site</a>
         </div>
       </div>
+      </div>
     {% endfor %}
+    </div>
 
 {% endmacro %}

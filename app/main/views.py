@@ -1,6 +1,6 @@
 from flask import render_template
 from . import main
-from ..request import get_news,get_highlights
+from ..request import get_news,get_highlights,get_all
 
 
 @main.route('/')
@@ -20,6 +20,16 @@ def highlights():
     View movie page function that returns the movie details page and its data
     '''
     highlights = get_highlights()
-    title = f'{highlights.name}'
 
-    return render_template('highlights.html',title = title,highlights=highlights)
+    return render_template('highlights.html',highlights=highlights)
+@main.route('/all')
+def all():
+
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    all_articles = get_all()
+    print(all_articles)
+    
+
+    return render_template('all.html',all=all_articles)
