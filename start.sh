@@ -1,1 +1,3 @@
+export NEWS_API_KEY=9dc28eb55a3f49ddb1ee18211f3cc8f6
+export SECRET_KEY=12345
 python3.6 manage.py server

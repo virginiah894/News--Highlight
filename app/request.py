@@ -4,6 +4,7 @@ from config import Config
 
 
 # fetching the api key
+global api_key,base_url
 api_key = Config.NEWS_API_KEY
 
 # base url

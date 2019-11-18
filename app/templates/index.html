@@ -6,15 +6,34 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 
+  
+
 {% block content %}
-  <div class="sources">
-    <div class="general">
-      <h2>Sports Sources</h2>
+<body style="background-color:lightblue;">
+<div id="business">
+    <h2 style="text-align: center;">Business News Sources</h2>
+      {% for business_news in business %}
+        {{ macro.displayNewsList(business) }}
+        {% endfor %}
+</div>
+<div class="tech">
+  
+    <h2 style="text-align: center;">Technology News Sources</h2>
+    {% for technology_news in sports %}
+          {{ macro.displayNewsList(technology)}}
+    {% endfor %}
+  </div>
+
+
+  <div class="sports">
+  
+      <h2 style="text-align: center;">Sports News Sources</h2>
       {% for sports_news in sports %}
             {{ macro.displayNewsList(sports)}}
       {% endfor %}
     </div>
-  </div>
+
+  </body>
 
 {% endblock%}
 
