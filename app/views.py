@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_news,get_soource
+from .request import get_news,get_source
 
 
 @app.route('/')
@@ -19,7 +19,7 @@ def source(id):
     '''
     View movie page function that returns the movie details page and its data
     '''
-    source = get_soource(id)
+    source = get_source(id)
     title = f'{news.name}'
 
     return render_template('source.html',title = title,news = news)

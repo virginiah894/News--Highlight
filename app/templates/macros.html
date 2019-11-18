@@ -1,12 +1,20 @@
 {% macro displayNewsList(news_list) %}
 
     {% for news in news_list %}
+    
+        <li class="text-center"> 
+            <a href="/news/{{news.id}}">
+                {{ news.name|truncate(10)}}</a>
+       </li>
+    
         <li>{{ news.id }}</li>
         <li>{{ news.name}}</li>
         <li>{{ news.category }}</li>
         <li>{{ news.language}}</li>
         <li>{{ news.description }}</li>
-        <li>{{ news.url }}</li>
+          <a href="/news/{{news.id}}">
+                {{ news.url|truncate(10)}}</a>
+       <!-- </li> <li>{{ news.url }}</li> -->
         <li>{{ news.country }}</li>
         
 
